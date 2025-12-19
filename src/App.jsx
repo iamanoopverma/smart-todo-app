@@ -5,23 +5,24 @@ import TodoList from './assets/components/TodoList/TodoList.jsx'
 import FilterButton from './assets/components/FilterButton/FilterButton.jsx'
 
 function App() {
-  const [allTodos, setAllTodos] = useState([{
-    id: null,
-    text: "",
-    completed: false
-  }]);
-
+  const [allTodos, setAllTodos] = useState([]);
+  let uniqueId = 0;
   function addTodo(inputText) {
-      setAllTodos()
+      let todo = {
+        id: uniqueId+1,
+        text: inputText,
+        completed: false
+      }
+      setAllTodos((prev) => [...prev, todo] );
   }
   function deleteTodo(id) {
-
+   setAllTodos((prev) => prev.filter(item => item.id !== id ));
   }
   function filterTodoList() {
 
   }
   function handleToggle(id){
-
+     setAllTodos((prev) => prev.map(item = item.id === id ? {...item, completed: !item.completed} : item  ))
   }
 
   return (
