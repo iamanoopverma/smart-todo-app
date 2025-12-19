@@ -1,13 +1,12 @@
+import './TodoListItem.css'
 
-
-function TodoListItem({allTodos, deleteTodos}){
+function TodoListItem({listElement, deleteTodo, handleToggle}){
     return(
-        <>
           <div className="todo-item">
-             <p>First Todo Item</p>
-             <Button onClick={deleteTodos}>Delete</Button>
+             <input type="checkbox" onChange={() => handleToggle(listElement.id)}/>
+             <p>{listElement.text}</p>
+             <button onClick={()=> deleteTodo(listElement.id)}>Delete</button>
           </div>
-        </>
     )
 }
 

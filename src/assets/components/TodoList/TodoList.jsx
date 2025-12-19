@@ -1,11 +1,21 @@
+import TodoListItem from '../TodoListItem/TodoListItem.jsx'
 
-
-function TodoList({children, allTodos}) {
+function TodoList({ allTodos, deleteTodo, handleToggle }) {
     return (
         <>
-            <ul>
-                <li>Todo Item 1</li>
-            </ul>
+            {
+                allTodos.map(item => {
+                    return (
+                       item.id ? <TodoListItem 
+                        key={item.id} 
+                        listElement={item} 
+                        deleteTodo={deleteTodo} 
+                        handleToggle={handleToggle} /> :
+                        <p>"List is Empty."</p>
+                    )
+                })
+            }
+
         </>
     )
 }

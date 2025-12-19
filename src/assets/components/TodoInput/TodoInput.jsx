@@ -1,10 +1,15 @@
+import {useState} from 'react'
 
 
-function TodoInput({allTodos, addtodo}){
+function TodoInput({addTodo}){
+const [inputText, setInputText] = useState("");
     return(
         <>
-           <form action="">
-               <input type="text" />
+           <form action="" onSubmit={()=>addTodo(inputText)}>
+               <input type="text" 
+               value={inputText}
+               onChange={(e)=> setInputText(e.target.value)}
+               />
                <button type="submit">Add Todo</button>
            </form>
         </>
