@@ -1,0 +1,14 @@
+form{
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   width:50vw;
+}
+form input{
+   font-size: 18px;
+   padding: 5px;
+   outline: none;
+   color: rgb(86, 86, 86);
+   width:100%;
+}
+
