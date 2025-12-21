@@ -5,30 +5,22 @@ import TodoList from './assets/components/TodoList/TodoList.jsx'
 import FilterButton from './assets/components/FilterButton/FilterButton.jsx'
 
 function App() {
-  const [allTodos, setAllTodos] = useState([
-    {
-      id: null,
-      text: "",
-      completed: false
-    }
-  ]);
-  let uniqueId = 0;
+  const [allTodos, setAllTodos] = useState([{
+    id: null,
+    text: "",
+    completed: false
+  }]);
 
   function addTodo(inputText) {
-    let todo = {
-      id: uniqueId + 1,
-      text: inputText,
-      completed: false
-    };
-    setAllTodos([...allTodos, todo])
+      setAllTodos()
   }
   function deleteTodo(id) {
-
+   setAllTodos((prev) => prev.filter(item => item.id !== id ));
   }
   function filterTodoList() {
 
   }
-  function handleToggle(id) {
+  function handleToggle(id){
 
   }
 
