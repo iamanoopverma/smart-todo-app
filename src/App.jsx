@@ -14,7 +14,7 @@ function App() {
       text: inputText,
       completed: false
     };
-    setAllTodos([...allTodos, todo]);
+    todo.text !== "" && setAllTodos([...allTodos, todo]);
   }
   function deleteTodo(id) {
     setAllTodos((prev) => 

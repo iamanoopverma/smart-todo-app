@@ -36,8 +36,8 @@ function TodoList({ allTodos, deleteTodo, handleToggle }) {
                         }
                     </div>
                     <div className="tab-content" id="tab2">
-                        {allTodos.filter(item => item.completed === true).length < 0 ?
-                        allTodos.filter(item => item.completed !== true)
+                        {allTodos.filter(item => item.completed === false).length > 0 ?
+                        allTodos.filter(item => item.completed === false)
                             .map(item => (
                                 <div className="tood-list">{
                                     <TodoListItem

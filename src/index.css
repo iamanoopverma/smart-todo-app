@@ -1,23 +1,29 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
   --pc: rgb(60, 93, 192);
 }
 
-*{
+* {
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-.mt-auto{
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.mt-auto {
   margin-top: 60px;
 }
 
-h2{
+h2 {
   margin-bottom: 20px;
   font-size: 2.5vw;
 }
 
-[class*="btn"]{
+[class*="btn"] {
   padding: 8px 16px;
   cursor: pointer;
   background-color: var(--pc);
@@ -28,7 +34,7 @@ h2{
   white-space: nowrap;
 }
 
-[class*="btn"]:hover{
+[class*="btn"]:hover {
   background-color: #fff;
   color: var(--pc);
 }
