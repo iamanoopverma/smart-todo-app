@@ -38,8 +38,8 @@ function TodoList({ allTodos, deleteTodo, handleToggle }) {
                 </div>
 
                 <div className="tab-content">
-                    {allTodos.length === 0 ? (
-                        <p>Todo list is empty.</p>
+                    {filteredTodos.length === 0 ? (
+                        <p>Empty.</p>
                     ) : (
                         filteredTodos.map(item => (
                             <div className="todo-list-item" key={item.id}>
