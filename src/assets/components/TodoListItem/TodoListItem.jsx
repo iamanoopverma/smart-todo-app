@@ -7,8 +7,8 @@ function TodoListItem({listElement, deleteTodo, handleToggle}){
              <input type="checkbox" 
              checked = {listElement.completed}
              onChange={() => handleToggle(listElement.id)}/>
-             <p style={
-                {textDecoration: listElement.completed ? "line-through" : "none"}
+             <p className={
+                  listElement.completed ? "done": ""
                 }>{listElement.text}</p>
              <button 
              className='delete-btn' 

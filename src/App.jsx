@@ -3,18 +3,16 @@ import './App.css'
 import TodoInput from './assets/components/TodoInput/TodoInput.jsx'
 import TodoList from './assets/components/TodoList/TodoList.jsx'
 
-let uniqueId = 0;
 function App() {
   const [allTodos, setAllTodos] = useState([]);
  
   function addTodo(inputText) {
-    uniqueId += 1;
     const todo = {
-      id: uniqueId,
+      id: crypto.randomUUID(),
       text: inputText,
       completed: false
     };
-    inputText.trim() !== "" && setAllTodos([...allTodos, todo]);
+    setAllTodos(prev => [...prev, todo]);
   }
   function deleteTodo(id) {
     setAllTodos((prev) => 

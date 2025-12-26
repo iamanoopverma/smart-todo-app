@@ -42,13 +42,12 @@ function TodoList({ allTodos, deleteTodo, handleToggle }) {
                         <p>Empty.</p>
                     ) : (
                         filteredTodos.map(item => (
-                            <div className="todo-list-item" key={item.id}>
-                                <TodoListItem
-                                    listElement={item}
-                                    deleteTodo={deleteTodo}
-                                    handleToggle={handleToggle}
-                                />
-                            </div>
+                            <TodoListItem
+                                key={item.id}
+                                listElement={item}
+                                deleteTodo={deleteTodo}
+                                handleToggle={handleToggle}
+                            />
                         ))
                     )}
                 </div>

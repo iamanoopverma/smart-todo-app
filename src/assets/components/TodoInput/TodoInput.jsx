@@ -6,8 +6,12 @@ function TodoInput({addTodo}){
 const [inputText, setInputText] = useState("");
 function handleSubmit(e){
    e.preventDefault();
-   inputText && addTodo(inputText);
-   setInputText("");
+   const trimmed = inputText.trim();
+   if (trimmed){
+       addTodo(trimmed);
+       setInputText("");
+   }
+   
 }
     return(
         <>
